@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 99%;
+        --foreground: 240 10% 3.9%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+
+        --primary: 142 70% 45%;
+        --primary-foreground: 0 0% 98%;
+
+        --secondary: 120 30% 96%;
+        --secondary-foreground: 142 70% 45%;
+
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+
+        --accent: 142 30% 90%;
+        --accent-foreground: 142 70% 45%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 142 20% 90%;
+        --input: 142 20% 90%;
+        --ring: 142 70% 45%;
+
+        --radius: 0.5rem;
+
+        --sidebar-background: 0 0% 98%;
+        --sidebar-foreground: 240 5.3% 26.1%;
+        --sidebar-primary: 142 70% 45%;
+        --sidebar-primary-foreground: 0 0% 98%;
+        --sidebar-accent: 142 30% 90%;
+        --sidebar-accent-foreground: 142 70% 45%;
+        --sidebar-border: 142 20% 91%;
+        --sidebar-ring: 142 70% 50%;
+    }
+
+    .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+
+        --primary: 142 70% 45%;
+        --primary-foreground: 240 5.9% 10%;
+
+        --secondary: 142 30% 15%;
+        --secondary-foreground: 0 0% 98%;
+
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+
+        --accent: 142 30% 15%;
+        --accent-foreground: 0 0% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 142 25% 25%;
+        --input: 142 25% 25%;
+        --ring: 142 70% 45%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground font-sans antialiased selection:bg-primary/10;
+        font-family:
+            'Inter',
+            -apple-system,
+            BlinkMacSystemFont,
+            sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Space Grotesk', sans-serif;
+        @apply font-medium tracking-tight;
+    }
+
+    .container {
+        @apply px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl;
+    }
+
+    .section {
+        @apply py-16 md:py-24;
+    }
+
+    .glass {
+        @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+            opacity 0.6s ease-out,
+            transform 0.6s ease-out;
+    }
+
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .links-underline a {
+        @apply relative inline-block;
+    }
+
+    .links-underline a::after {
+        content: '';
+        @apply absolute w-0 h-0.5 bg-green-500 left-0 bottom-0 transition-all duration-300;
+    }
+
+    .links-underline a:hover::after {
+        @apply w-full;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+/* Add green gradient backgrounds */
+.bg-green-gradient-soft {
+    background: linear-gradient(184.1deg, rgba(249, 255, 182, 1) 44.7%, rgba(226, 255, 172, 1) 67.2%);
+}
+
+.bg-green-gradient-vibrant {
+    background: linear-gradient(108deg, rgba(242, 245, 139, 1) 17.7%, rgba(148, 197, 20, 0.68) 91.2%);
+}
+
+.bg-green-gradient-emerald {
+    background: linear-gradient(90deg, hsla(139, 70%, 75%, 1) 0%, hsla(63, 90%, 76%, 1) 100%);
+}
+
+.glass-card {
+    background-color: rgba(255, 255, 255, 0.4);
+    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-backdrop-blur: blur(16px);
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
+        var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
+        var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,11 @@
+/node_modules
+/dist
+.firebase/
+functions/node_modules/
+functions/lib/
+.env
+.DS_Store
+service-account-file.json
+next-env.d.ts
+.next
+tsconfig.tsbuildinfo
