@@ -148,5 +148,8 @@
     "MADE_WITH": "Hecho con",
     "AND_CODE": "y código",
     "AJUDADANA_DESCRIPTION": "Un servidor web colaborativo creado para ayudar a los afectados por las inundaciones de Valencia en octubre de 2024, se implementó en dos semanas debido a la urgencia de la app por estar activa lo antes posible.",
-    "AJUDADANA": "Ajudadana"
+    "AJUDADANA": "Ajudadana",
+    "CORNOCONSULTING": "Consultoría Corno",
+    "CORNOCONSULTING_DESCRIPTION": "Un servidor web para una empresa de consultoría. Se creó para reemplazar el sitio web anterior, creado con WordPress y que no satisfacía las necesidades de la empresa.",
+    "WORDPRESS": "Wordpress"
 }

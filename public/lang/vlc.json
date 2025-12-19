@@ -147,5 +147,8 @@
     "MADE_WITH": "Fet amb",
     "AND_CODE": "i codi",
     "AJUDADANA_DESCRIPTION": "Servidor web col·laboratiu construït per ajudar les persones afectades per les inundacions de València de l'octubre de 2024, es va implantar en dues setmanes per la urgència que l'app s'activa el més aviat possible.",
-    "AJUDADANA": "Ajudadana"
+    "AJUDADANA": "Ajudadana",
+    "CORNOCONSULTING": "Corno Consulting",
+    "CORNOCONSULTING_DESCRIPTION": "Un servidor web per a una empresa que ofereix serveis de consultoria. Es va construir per substituir el lloc web anterior, que estava fet amb WordPress i no complia les necessitats de l'empresa.",
+    "WORDPRESS": "WordPress"
 }
