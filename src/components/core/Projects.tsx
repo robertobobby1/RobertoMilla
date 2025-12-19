@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import robertomilla from '@/images/robertomilla.webp';
 import albertomilla from '@/images/albertomilla.webp';
 import ajudadana from '@/images/ajudadana.webp';
+import cornoconsulting from '@/images/cornoconsulting.webp';
 import rcore from '@/images/rcore.webp';
 import panga from '@/images/panga.webp';
 import appnotas from '@/images/appnotas.webp';
@@ -23,6 +24,15 @@ const PROJECTS: ProjectList = [
         tags: ['REACT', 'NEXT_JS', 'TS', 'VERCEL', 'SUPABASE'],
         image: ajudadana,
         demo: 'https://ajudadana.es/',
+    },
+    {
+        title: 'CORNOCONSULTING',
+        description: 'CORNOCONSULTING_DESCRIPTION',
+        fromDate: new Date(2025, 7),
+        toDate: new Date(2025, 10),
+        tags: ['REACT', 'HTML', 'TAILWIND_CSS', 'PHP', 'WORDPRESS'],
+        image: cornoconsulting,
+        demo: 'https://cornoconsulting.it/',
     },
     {
         title: 'PORTFOLIO_WEB',
@@ -190,15 +200,17 @@ const Projects = () => {
                                 </div>
 
                                 <div className="flex space-x-4 pt-2">
-                                    <a
-                                        href={project.github}
-                                        className="flex items-center text-sm font-medium hover:text-primary transition-colors"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <Github size={16} className="mr-2" />
-                                        {t('SOURCE_CODE')}
-                                    </a>
+                                    {project.github && (
+                                        <a
+                                            href={project.github}
+                                            className="flex items-center text-sm font-medium hover:text-primary transition-colors"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <Github size={16} className="mr-2" />
+                                            {t('SOURCE_CODE')}
+                                        </a>
+                                    )}
                                     {project.demo && (
                                         <a
                                             href={project.demo}

@@ -57,6 +57,9 @@
     "AJUDADANA": "Ajudadana",
     "AJUDADANA_DESCRIPTION": "A collaborative web server built to help the people affected by the floods of Valencia in October 2024, it was implemented in two weeks due to the urgency of the app to be active as soon as possible.",
 
+    "CORNOCONSULTING": "Corno Consulting",
+    "CORNOCONSULTING_DESCRIPTION": "A web server for a company that provides consulting services. It was built to replace the previous website, which was built with WordPress and was not meeting the company's needs.",
+
     "RCORE": "R-Core Framework",
     "RCORE_DESCRIPTION": "A cross-platform framework featuring dependency injection and a multi-threaded service architecture. Includes base services such as a generic server, HTTP server, and window management.",
 
@@ -150,6 +153,7 @@
     "HARDWARE": "Hardware",
     "AI": "AI",
     "PHP": "PHP",
+    "WORDPRESS": "Wordpress",
     "XAMARIN": "Xamarin",
     "JIRA": "Jira",
     "GCLOUD": "Gcloud",

@@ -9,34 +9,29 @@ import {
 import { cn } from '@/helpers/Utils';
 import i18next from 'i18next';
 import { Language } from '@/helpers/Enum';
-import { ValenciaFlagIcon } from '@/helpers/CustomIcons';
+import { ValenciaFlagIcon, UKFlagIcon, SpainFlagIcon } from '@/helpers/CustomIcons';
 
 type LanguageSelector = {
     lng: Language;
     code: string;
     name: string;
-    flag: string;
 };
 
 function getFlag(lng: Language) {
     switch (lng) {
         case Language.ENGLISH:
-            return '🇬🇧';
+            return <UKFlagIcon size={20} className="shrink-0" />;
         case Language.SPANISH:
-            return '🇪🇸';
+            return <SpainFlagIcon size={20} className="shrink-0" />;
         case Language.VALENCIANO:
-            return (
-                <div className="flex w-5 h-6">
-                    <ValenciaFlagIcon size={20} className="m-auto" />
-                </div>
-            );
+            return <ValenciaFlagIcon size={20} className="shrink-0" />;
     }
 }
 
 const languages: LanguageSelector[] = [
-    { lng: Language.ENGLISH, code: Language.ENGLISH, name: 'English', flag: '🇬🇧' },
-    { lng: Language.SPANISH, code: Language.SPANISH, name: 'Español', flag: '🇪🇸' },
-    { lng: Language.VALENCIANO, code: 'VLC', name: 'Valencià', flag: '🏴' },
+    { lng: Language.ENGLISH, code: Language.ENGLISH, name: 'English' },
+    { lng: Language.SPANISH, code: Language.SPANISH, name: 'Español' },
+    { lng: Language.VALENCIANO, code: 'VLC', name: 'Valencià' },
 ];
 
 interface LanguageSelectorProps {
@@ -59,7 +54,7 @@ const LanguageSelector = ({ className }: LanguageSelectorProps) => {
                         className,
                     )}
                 >
-                    <span className="text-base">{getFlag(selectedLanguage.lng)}</span>
+                    {getFlag(selectedLanguage.lng)}
                     <span className="hidden sm:inline">{selectedLanguage.code.toUpperCase()}</span>
                     <Globe className="h-3.5 w-3.5 text-primary/70" />
                 </button>
@@ -74,7 +69,7 @@ const LanguageSelector = ({ className }: LanguageSelectorProps) => {
                         )}
                         onClick={() => handleLanguageChange(language)}
                     >
-                        <span className="text-base">{getFlag(language.lng)}</span>
+                        {getFlag(language.lng)}
                         <span>{language.name}</span>
                     </DropdownMenuItem>
                 ))}

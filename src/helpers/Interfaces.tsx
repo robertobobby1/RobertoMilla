@@ -6,7 +6,7 @@ export interface ProjectItem {
     description: TranslationKey;
     tags: TranslationKey[];
     image: string;
-    github: string;
+    github?: string;
 
     fromDate: Date;
     // to date may be undefined implying it is still active
